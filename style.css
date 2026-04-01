@@ -151,18 +151,24 @@ nav {
 section {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 3.5rem 3rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 3rem;
-  display: flex; align-items: center; gap: 1rem;
+  padding: 6rem 3rem 4rem;
+}
+
+.section-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 .section-label::after {
   content: '';
-  flex: 1; height: 1px;
+  flex: 1;
+  height: 1px;
   background: var(--border2);
 }
 
@@ -267,7 +273,7 @@ section {
 .exp-company {
   font-family: 'DM Mono', monospace;
   font-size: 12px;
-  text-transform: uppercase;
+  color: var(--muted2);
   margin-bottom: 0.9rem;
 }
 .exp-content p {
@@ -476,7 +482,7 @@ footer span {
 
   #hero { padding: 0 1.5rem 4rem; }
   .hero-line { left: 1.5rem; right: 1.5rem; }
-  section { padding: 5rem 1.5rem; }
+  section { padding: 4rem 1.5rem 3rem; }
 
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
   .about-img { aspect-ratio: 4/3; max-width: 280px; }
