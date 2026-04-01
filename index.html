@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxwell Newsome | Computer Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">MN</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+    <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-bg-text">ENGINEER</div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Computer Engineering · UBC</div>
+    <h1 class="hero-name">Maxwell<br>Newsome.</h1>
+    <p class="hero-title">Firmware & embedded systems engineer.</p>
+    <a href="#about" class="hero-scroll">Explore my work</a>
+  </div>
+  <div class="hero-line"></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About me</div>
+  <div class="about-grid">
+    <div class="about-img">
+      <div class="about-img-placeholder">
+        <span>◈</span>
+        Your photo here
+      </div>
+    </div>
+    <div class="about-text">
+      <h2>Where hardware meets software.</h2>
+      <p>I'm a Computer Engineering student at UBC (graduating May 2028) with a focus on embedded systems, firmware development, and hardware design. My work spans bare-metal C/C++, FPGA design, and real-time operating systems — I like working at the layer where code has real physical consequences.</p>
+      <p>Currently building firmware for AgroBot, UBC's autonomous agricultural robot. I'm drawn to projects that involve signal processing, control systems, and the careful craft of writing reliable software for constrained hardware.</p>
+      <p>Outside of engineering, I'm a lifeguard and swim instructor — I value precision, safety, and the ability to stay calm when things go wrong.</p>
+      <div class="btn-row">
+        <a href="file:///C:/Users/maxwe/OneDrive/Documents/Resume/Maxwell%20Newsome.pdf" target="_blank" class="btn accent">View Resume ↗</a>
+        <a href="https://www.linkedin.com/in/maxwell-newsome" target="_blank" class="btn">LinkedIn ↗</a>
+        <a href="mailto:maxnew@student.ubc.ca" class="btn">Email ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Experience</div>
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-date">Sep 2025 –<br>Present</div>
+        <div class="exp-logo">⬡</div>
+      </div>
+      <div class="exp-content">
+        <h3>Firmware Engineer</h3>
+        <div class="exp-company">AgroBot Design Team · UBC</div>
+        <p>Develop embedded firmware in C++ on an STM32 microcontroller to acquire and digitize battery voltage and current telemetry using the internal ADC. Compute power metrics and support State of Charge (SOC) and State of Health (SOH) estimation for a battery management system. Transmit calibrated telemetry data over UART and CAN for integration with robot control and diagnostics.</p>
+        <div class="exp-tags">
+          <span class="tag">STM32</span><span class="tag">C++</span><span class="tag">ADC</span><span class="tag">UART</span><span class="tag">CAN</span><span class="tag">BMS</span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Technical Projects</div>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-stack">STM32 · FreeRTOS · I2C · SPI · C</div>
+      <h3>Smart Soldering Air Quality Monitor</h3>
+      <p>Embedded air quality monitoring system on an STM32 Nucleo using FreeRTOS — integrating a BME680 sensor over I2C and an SPI-driven LCD for real-time environmental feedback. Multi-task architecture with sensor acquisition, display updates, and high-priority alert handling. Two-stage safety alert system with interrupt-driven user acknowledgment to reset persistent hazard states.</p>
+      <div class="project-date">March 2026</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-stack">C · Python · Matplotlib</div>
+      <h3>Custom Dynamic Memory Allocator & Heap Visualizer</h3>
+      <p>Custom dynamic memory allocator in C supporting alloc, free, and realloc with block splitting and bidirectional coalescing using header–footer metadata. Heap simulation framework that executes allocation instructions from a script and logs block offsets, sizes, and states. Python/Matplotlib animation visualizing heap state changes, fragmentation, and coalescing behavior over time.</p>
+      <div class="project-date">March 2026</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-stack">C · FPGA · VGA · SystemVerilog · UART</div>
+      <h3>Embedded Task Scheduler & VGA Game System</h3>
+      <p>Bare-metal multitasking scheduler in C using machine-timer interrupts to coordinate concurrent UART, LED, VGA, and game tasks. Memory-mapped VGA graphics engine with custom pixel, text, and shape rendering — including an interactive TRON-style game. Hardware interrupts and switches for real-time control; FSM-driven task management on an FPGA platform.</p>
+      <div class="project-date">Dec 2025 – Jan 2026</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-stack">SystemVerilog · FPGA · FSM · GPIO</div>
+      <h3>Keypad-Controlled Digital Combination Lock</h3>
+      <p>SystemVerilog FSM-based keypad lock with debounced scanning and metastability handling, enabling reliable communication between two FPGAs via synchronized GPIO handshaking. Designed for UBC's computer engineering curriculum as a hardware security exercise.</p>
+      <div class="project-date">Oct 2025 · UBC</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">Technical Skills</div>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-tags">
+        <span>C</span><span>C++</span><span>Python</span><span>Java</span>
+        <span>SystemVerilog</span><span>Assembly</span><span>Bash</span>
+        <span>MATLAB</span><span>Arduino (C/C++)</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Hardware & Platforms</div>
+      <div class="skill-tags">
+        <span>STM32</span><span>FPGA</span><span>Arduino</span>
+        <span>L298N Motor Drivers</span><span>IR Sensors</span>
+        <span>Circuit Assembly</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Protocols & Interfaces</div>
+      <div class="skill-tags">
+        <span>UART</span><span>CAN</span><span>I2C</span><span>SPI</span>
+        <span>GPIO</span><span>ADC</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Tools & Software</div>
+      <div class="skill-tags">
+        <span>Git</span><span>FreeRTOS</span><span>Altium</span>
+        <span>LTspice</span><span>PSpice CAD</span><span>Questa</span>
+        <span>Oscilloscopes</span><span>Multimeters</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div id="contact">
+  <div class="contact-inner">
+    <div class="contact-pre">Get in touch</div>
+    <h2 class="contact-heading">Let's build<br><em>something real.</em></h2>
+    <p class="contact-sub">Open to internships and co-ops.Available remotely or on-site and willing to relocate.</p>
+    <a href="mailto:maxnew@student.ubc.ca" class="contact-email">maxnew@student.ubc.ca</a>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/maxwell-newsome" target="_blank" class="btn">LinkedIn ↗</a>
+      <a href="tel:+17786973299" class="btn">+1 (778) 697-3299</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Maxwell Newsome</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/maxwell-newsome" target="_blank">LinkedIn</a>
+    <a href="mailto:maxnew@student.ubc.ca">Email</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
