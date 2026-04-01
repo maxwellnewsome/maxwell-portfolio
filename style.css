@@ -164,6 +164,7 @@ section {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  text-transform: uppercase;
 }
 .section-label::after {
   content: '';
